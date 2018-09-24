@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{title}}</title>
+    </head>
+    <body>
+        Random occupation: {{randomocc}}
+        <table>
+            <tr>
+                <th>{{first}}</th>
+                <th>{{second}}</th>
+            </tr>
+            {% for key,value in diction.items() %}
+            <tr>
+                <td>{{key}}</td>
+                <td>{{value}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
