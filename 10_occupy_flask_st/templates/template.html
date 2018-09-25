@@ -1,3 +1,10 @@
+<!--
+wuleeSweater - Jeffrey Wu, Emily Lee
+SoftDev1 pd6
+L#10 - Jinja Tuning
+2018-09-23
+-->
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -7,12 +14,13 @@
         Random occupation: {{randomocc}}
         <table>
             <tr>
-                <th>{{first}}</th>
+                <th>{{first}}</th> <!-- headings -->
                 <th>{{second}}</th>
             </tr>
+            <!--items(), first var as key, 2nd var as val-->
             {% for key,value in diction.items() %}
             <tr>
-                <td>{{key}}</td>
+                <td>{{key}}</td> 
                 <td>{{value}}</td>
             </tr>
             {% endfor %}
