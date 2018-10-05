@@ -14,26 +14,22 @@ c = db.cursor()               #facilitate db ops
 
 #==========================================================
 #INSERT YOUR POPULATE CODE IN THIS ZONE
-com = '' #build SQL stmt, save as string
+
 with open('data/courses.csv') as coursesFile:
     courses = csv.DictReader(coursesFile)
     for rec in courses:
-        string = "INSERT INTO courses VALUES("
+        string = "INSERT INTO courses VALUES('"
         for val in rec:
-             string += rec[val] +','
-        com += string[0:-1] + ');'
+             string += rec[val] +"','"
+        c.execute(string[0:-2] + ');')
 
 with open('data/peeps.csv') as peepsFile:
     peeps = csv.DictReader(peepsFile)
     for rec in peeps:
-        string = "INSERT INTO peeps VALUES("
+        string = "INSERT INTO peeps VALUES(" + "'"
         for val in rec:
-             string += rec[val] +','
-        com += string[0:-1] + ');'
-
-
-c.execute(com)
-#run SQL statement
+             string += rec[val] + "','"
+        c.execute(string[0:-2] + ');')
 
 #==========================================================
 
