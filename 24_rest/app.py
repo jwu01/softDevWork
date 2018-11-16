@@ -8,7 +8,6 @@ app.secret_key = os.urandom(32)
 
 @app.route("/", methods = ["POST", "GET"])
 def input_field_page():
-	# Please be responsible with my public key :)
 	request = urllib.request.urlopen('https://api.nasa.gov/planetary/apod?api_key=NWCEFKTu2YHw1yKF6wsI7BqLLc9bvTzQD3rLUm4s')
 	data = json.loads(request.read())
 	videoUrl = data['url']
