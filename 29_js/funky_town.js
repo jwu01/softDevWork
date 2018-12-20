@@ -7,7 +7,7 @@ K29 -- Sequential Progression II: Electric Boogaloo...
     var sum = [0,1]
     for (var i = 2; i <= n; i++) 
       sum.push(sum[i-2] + sum[i-1]);
-    return sum[n-1]
+    return sum[n]
   };
   
   var gcd = function(a,b) {
