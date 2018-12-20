@@ -1,9 +1,13 @@
+/* Team BigFish - Jeffrey Wu and Dennis Chen
+SoftDev1 pd6
+K29 -- Sequential Progression II: Electric Boogaloo...
+2018-12-19*/
 
   var fibonacci = function(n) {
     var sum = [0,1]
     for (var i = 2; i <= n; i++) 
       sum.push(sum[i-2] + sum[i-1]);
-    sum[n]
+    return sum[n-1]
   };
   
   var gcd = function(a,b) {
