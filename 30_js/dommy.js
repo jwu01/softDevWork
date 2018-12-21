@@ -43,3 +43,17 @@ fibButt.addEventListener('click',function() {
  count++;
 });
 
+var power2 = document.createElement('ol');
+var body =  document.getElementsByTagName('body')[0];
+body.appendChild(power2);
+var twoBut = document.createElement('button');
+twoBut.innerHTML = "powers of 2";
+body.appendChild(twoBut);
+
+var twoCount = 0;
+twoBut.addEventListener('click', function(){
+  var li = document.createElement('li');
+  li.innerHTML = 2 ** twoCount;
+  power2.appendChild(li);
+  twoCount++;
+})
