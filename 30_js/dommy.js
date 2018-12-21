@@ -54,6 +54,7 @@ var twoCount = 0;
 twoBut.addEventListener('click', function(){
   var li = document.createElement('li');
   li.innerHTML = 2 ** twoCount;
+  li.setAttribute('style', "color: #" + twoCount % 10 + 'AAA' + (10 -twoCount) % 10 + 'A');
   power2.appendChild(li);
   twoCount++;
 })
